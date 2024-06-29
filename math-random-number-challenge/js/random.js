@@ -1,13 +1,20 @@
-// Collect input from a user
-let userInput = prompt('Please type a number');
+let randomNumber;
+// Collect inputs from a user
+const inputLow = prompt('Please input a low number');
+const inputHigh = prompt('Please input a high number');
 
-// Convert the input to a number
-userInput = parseInt(userInput);
-console.log(typeof (userInput));
+// Convert the inputs to a number
+const highNumber = parseInt(inputHigh);
+const lowNumber = parseInt(inputLow);
 
-// Use Math.random() and the user's number to generate a random number
-const randomNumber = Math.floor((Math.random() * userInput) * 1);
+if (lowNumber >= 0 && highNumber) {
+    // Use Math.random() and the user's number to generate a random number
+    randomNumber = Math.floor((Math.random() * (highNumber - lowNumber + 1)) + lowNumber);
+    console.log(`${randomNumber} is a random number between ${lowNumber} and ${highNumber}`);
+} else {
+    console.log('You need to provide a number. Try again.');
+}
 
 // Create a message displaying the random number
 const main = document.querySelector('main');
-main.innerHTML = `<p><strong>${randomNumber}</strong> is a random number between 1 and <strong>${userInput}</strong></p>`;
+main.innerHTML = `<p><strong>${randomNumber}</strong> is a random number between <strong>${lowNumber}</strong> and <strong>${highNumber}</strong></p>`;
