@@ -1,9 +1,9 @@
 const getRandomNumber = (upper) => {
-  const randomNumber = Math.floor( Math.random() * upper ) + 1;
+  const randomNumber = Math.floor(Math.random() * upper) + 1;
   return randomNumber;
 };
 
-function getArea(width, length, unit) {
+const getArea = (width, length, unit) => {
   const area = width * length;
   return `${area} ${unit}`;
 }
