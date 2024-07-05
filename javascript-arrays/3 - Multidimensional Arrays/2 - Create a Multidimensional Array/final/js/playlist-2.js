@@ -10,10 +10,10 @@ const playlist = [
 //const myArtists = `${playlist[0][1]}, ${playlist[1][1]}, ${playlist[5][1]}`;
 //console.log(myArtists);
 
-function createListItems( arr ) {
+function createListItems(arr) {
   let items = '';
-  for ( let i = 0; i < arr.length; i++ ) {
-    items += `<li>${ arr[i][0] }, by ${ arr[i][1] } – ${ arr[i][2] }</li>`;
+  for (let i = 0; i < arr.length; i++) {
+    items += `<li>${arr[i][0]}, by ${arr[i][1]} - ${arr[i][2]}</li>`;
   }
   return items;
 }
