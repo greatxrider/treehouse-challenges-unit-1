@@ -6,7 +6,7 @@ function randomRGB(value) {
   return color;
 }
 
-for ( let i = 1; i <= 10; i++ ) {
+for (let i = 1; i <= 10; i++) {
   html += `<div style="background-color: ${randomRGB(randomValue)}">${i}</div>`;
 }
 
